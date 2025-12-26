@@ -4018,12 +4018,12 @@ footer {
         min-height: 90px;
     }
     
-    /* Display Ad 2 (300x600) - Mobile: Full width */
+    /* Display Ad 2 (728x90) - Mobile: Full width */
     .ad-container ins[data-ad-slot="2271585247"] {
         width: 100% !important;
-        max-width: 300px !important;
+        max-width: 100% !important;
         height: auto !important;
-        min-height: 400px;
+        min-height: 90px;
     }
     
     /* Game Main Sections */
