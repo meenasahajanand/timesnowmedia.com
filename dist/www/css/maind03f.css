@@ -4351,12 +4351,28 @@ footer {
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
+        align-items: flex-start !important;
+        position: relative !important;
     }
     
     .detail .boxes .LBox {
         width: 880px !important;
+        max-width: 880px !important;
         margin-right: 20px !important;
         margin-bottom: 0 !important;
+        float: none !important;
+        position: relative !important;
+        display: block !important;
+        order: 1 !important;
+    }
+    
+    .detail .boxes .RBox {
+        width: 300px !important;
+        max-width: 300px !important;
+        float: none !important;
+        position: relative !important;
+        display: block !important;
+        order: 2 !important;
     }
     
     .detail .boxes .LBox .gameTop {
@@ -4416,6 +4432,7 @@ footer {
         margin-top: 40px !important;
     }
     
+    /* Screenshot section - must stay in LBox */
     .detail .boxes .LBox .swiper_con {
         width: 100% !important;
         margin-top: 20px !important;
@@ -4423,16 +4440,28 @@ footer {
         display: block !important;
         visibility: visible !important;
         position: relative !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
     }
     
     .detail .boxes .LBox .swiper_con>h2 {
         font-size: 28px !important;
         padding-bottom: 10px !important;
         border-bottom: 1px solid #eee !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .swiper_con .preview {
         margin-top: 12px !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-wrapper {
+        display: flex !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .swiper_con .preview .swiper-wrapper .swiper-slide {
@@ -4440,25 +4469,40 @@ footer {
         height: 260px !important;
         border-radius: 10px !important;
         overflow: hidden !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .swiper_con .preview .swiper-wrapper .swiper-slide>img {
         height: 100% !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
+    .detail .boxes .LBox .swiper_con .sw_btn {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    /* How To Play section - must stay in LBox */
     .detail .boxes .LBox .module {
         width: 100% !important;
         min-height: 134px !important;
+        margin-top: 0 !important;
         margin-bottom: 20px !important;
         display: block !important;
         visibility: visible !important;
+        opacity: 1 !important;
         overflow: hidden !important;
+        position: relative !important;
     }
     
     .detail .boxes .LBox .module>h2 {
         font-size: 28px !important;
         padding-bottom: 10px !important;
         border-bottom: 1px solid #eee !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .module .des {
@@ -4472,6 +4516,8 @@ footer {
         font-weight: 500 !important;
         text-transform: none !important;
         letter-spacing: 0 !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .module .des>p {
@@ -4483,6 +4529,8 @@ footer {
         font-weight: 500 !important;
         text-transform: none !important;
         letter-spacing: 0 !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .detail .boxes .LBox .get {
@@ -4519,13 +4567,19 @@ footer {
         max-width: 356px !important;
     }
     
-    /* Ensure Screenshot stays in LBox, not RBox */
-    .detail .boxes .RBox .swiper_con {
+    /* Ensure Screenshot and How To Play stay in LBox, not RBox */
+    .detail .boxes .RBox .swiper_con,
+    .detail .boxes .RBox .module {
         display: none !important;
+        visibility: hidden !important;
     }
     
-    .detail .boxes .LBox .swiper_con {
+    /* Ensure LBox sections are visible */
+    .detail .boxes .LBox .swiper_con,
+    .detail .boxes .LBox .module {
         display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .detail .boxes .RBox .ad-container {
