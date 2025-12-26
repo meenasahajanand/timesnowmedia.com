@@ -4418,21 +4418,71 @@ footer {
     
     .detail .boxes .LBox .swiper_con {
         width: 100% !important;
-        margin-bottom: 20px;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        display: block !important;
+        visibility: visible !important;
+        position: relative !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con>h2 {
+        font-size: 28px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 1px solid #eee !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview {
+        margin-top: 12px !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-wrapper .swiper-slide {
+        width: auto !important;
+        height: 260px !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con .preview .swiper-wrapper .swiper-slide>img {
+        height: 100% !important;
     }
     
     .detail .boxes .LBox .module {
         width: 100% !important;
-        margin-bottom: 20px;
+        min-height: 134px !important;
+        margin-bottom: 20px !important;
+        display: block !important;
+        visibility: visible !important;
+        overflow: hidden !important;
     }
     
-    .detail .boxes .LBox .module h2 {
+    .detail .boxes .LBox .module>h2 {
         font-size: 28px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 1px solid #eee !important;
     }
     
     .detail .boxes .LBox .module .des {
+        margin-top: 10px !important;
+        min-height: 80px !important;
         font-size: 16px !important;
         line-height: 1.6em !important;
+        color: #666 !important;
+        font-family: futurabtbook !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+    }
+    
+    .detail .boxes .LBox .module .des>p {
+        color: #666 !important;
+        font-size: 16px !important;
+        line-height: 1.6em !important;
+        font-family: futurabtbook !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
     }
     
     .detail .boxes .LBox .get {
@@ -4467,6 +4517,15 @@ footer {
     .detail .boxes .RBox .Adbox {
         width: 356px !important;
         max-width: 356px !important;
+    }
+    
+    /* Ensure Screenshot stays in LBox, not RBox */
+    .detail .boxes .RBox .swiper_con {
+        display: none !important;
+    }
+    
+    .detail .boxes .LBox .swiper_con {
+        display: block !important;
     }
     
     .detail .boxes .RBox .ad-container {
